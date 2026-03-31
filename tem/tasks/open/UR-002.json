@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "task_id": "UR-002",
+  "title": "Runtime-Tooling in invoke-bar vs dead trennen",
+  "status": "open",
+  "track": "unreachable-reduction",
+  "source_docs": [
+    "docs/V2/SYSTEM_PLAN.md"
+  ],
+  "description": "Klassifiziert dev/tools/runtime Dateien in aktiv aufrufbar (scripts/hooks/ci) oder dead. Dead Paths werden entfernt oder in klaren Archive-Scope verschoben.",
+  "scope_paths": [
+    "package.json",
+    ".githooks/",
+    ".github/workflows/",
+    "dev/tools/runtime/",
+    "app/src/sot/repo-boundaries.json",
+    "runtime/evidence/unreachable-cause-report.json"
+  ],
+  "match_policy": "all_scope_paths_touched"
+}

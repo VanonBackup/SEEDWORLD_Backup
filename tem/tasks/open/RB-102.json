@@ -1,0 +1,22 @@
+{
+  "schema_version": "2.0.0",
+  "task_id": "RB-102",
+  "title": "CF-004 Canvas-Migration explizit nachweisen",
+  "status": "open",
+  "track": "canvas-migration",
+  "source_docs": [
+    "tem/rebuttals/cf-003-008-cycle-01.md",
+    "docs/V2/RULES.md",
+    "tem/WORKFLOW.md"
+  ],
+  "description": "Tile-Primärpfad auf Canvas umstellen und DOM nur als Restadapter/Fallback behalten, inklusive Evidence pro Scope-Datei.",
+  "scope_paths": [
+    "app/src/ui/TileGridRenderer.js",
+    "app/src/ui/UIController.js",
+    "app/src/ui/RenderManager.js",
+    "app/public/game.html",
+    "app/src/ui/tileGrid.css"
+  ],
+  "match_policy": "all_scope_paths_touched"
+}
+

@@ -1,0 +1,22 @@
+{
+  "schema_version": "2.0.0",
+  "task_id": "RB-101",
+  "title": "Scope-Isolation fuer atomare Task-Slices erzwingen",
+  "status": "open",
+  "track": "governance",
+  "source_docs": [
+    "tem/rebuttals/cf-003-008-cycle-01.md",
+    "docs/V2/RULES.md",
+    "tem/WORKFLOW.md"
+  ],
+  "description": "Change-Sets so schneiden, dass jeweils nur ein Task-Scope gematcht wird und off-scope Dateiaenderungen ausgeschlossen sind.",
+  "scope_paths": [
+    "tem/tasks/open/CF-003.json",
+    "tem/tasks/open/CF-006.json",
+    "tem/tasks/open/CF-007.json",
+    "docs/V2/RULES.md",
+    "tem/WORKFLOW.md"
+  ],
+  "match_policy": "all_scope_paths_touched"
+}
+

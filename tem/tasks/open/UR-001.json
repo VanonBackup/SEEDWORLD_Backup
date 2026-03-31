@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "task_id": "UR-001",
+  "title": "Kernel/Game Reachability-Startkette explizit verankern",
+  "status": "open",
+  "track": "unreachable-reduction",
+  "source_docs": [
+    "docs/V2/SYSTEM_PLAN.md"
+  ],
+  "description": "Beseitigt inbound-but-unreachable Cluster in app/src/kernel und app/src/game durch explizite, testbare Entry-Point-Verankerung oder begruendete Allowlist-Regel mit Sunset.",
+  "scope_paths": [
+    "app/src/sot/repo-boundaries.json",
+    "app/src/sot/REPO_HYGIENE_MAP.json",
+    "dev/tools/runtime/repo-hygiene-map.mjs",
+    "dev/tools/runtime/repo-hygiene-verify.mjs",
+    "runtime/evidence/unreachable-cause-report.json"
+  ],
+  "match_policy": "all_scope_paths_touched"
+}

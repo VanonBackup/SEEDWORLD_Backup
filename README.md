@@ -1,2 +1,58 @@
-# SEEDWORLD_Backup
-Only for my personl experimantel use because i am a Github Dumb
+# SeedWorld
+
+[![Required Checks](https://github.com/Vannon0911/SeedWorld/actions/workflows/required-checks.yml/badge.svg?branch=main)](https://github.com/Vannon0911/SeedWorld/actions/workflows/required-checks.yml)
+
+SeedWorld ist jetzt auf drei Wahrheiten reduziert:
+
+- deterministischer Kernel
+- reproduzierbare seed-basierte Ausfuehrung
+- autoritative Spielinhalte
+
+Aktueller Release-Stand: `0.3.1a`
+
+## Pflichtpfad
+
+```bash
+npm run check:required
+npm run check:required:verify-only
+
+# oder als Gesamtlinie
+npm run check:advisory
+```
+
+`check:required` ist der kanonische Green-Path mit teilautomatischem Sync fuer deterministische Artefakte.
+`check:required:verify-only` ist fail-closed (kein Auto-Write) fuer pre-push/CI/release.
+Ein gueltiger Erfolg ist nur `PASS_REPRODUCED` plus belegbare Evidence-Artefakte + Proof-Manifest.
+
+## Repo-Kern
+
+- `app/src/kernel/` deterministische Kernel-Ausfuehrung
+- `app/src/game/` autoritative Inhalte und Regelinterpretation
+- `dev/tests/modules/` doppelte Reproduktionssuiten
+- `dev/scripts/` Run-/Pair-Evidence und Comparator
+- `dev/tools/runtime/verify-testline-integrity.mjs` finaler Schlusstest
+- `dev/tools/runtime/run-required-checks.mjs` kanonischer Gate-Runner + Proof-Report
+- `dev/tools/runtime/sync-versioning.mjs` mechanische Versionssynchronisation ueber Repo-Daten
+- `app/src/kernel/GovernanceEngine.js` einheitliche Governance-Engine fuer Kernel + Pflichtpipeline
+- `app/src/sot/governance-engine.sot.v2.json` SoT-2.0-Vertrag fuer Governance Engine
+- `runtime/evidence/governance-proof-manifest.json` zero-trust Manifest fuer Gate/SOT/Evidence-Hashes
+- `docs/LLM/` + `Sub_Agent/` verpflichtende Governance-Prozedur (Pflichtlektuere), nicht Runtime-Simulation
+- `docs/V2/` fuehrende Doku-, Plan- und Archivschicht
+- `app/src/sot/STRING_MATRIX.json` maschinenlesbare String-Disziplin fuer aktive Spiel- und Doku-Pfade
+
+## Aus dem Pflichtpfad entfernt
+
+- Server- und Browser-Pfade
+- Patch-/Hotfix-/Remote-Mechanik
+- Playwright-/CDP-Gates
+- Preflight-, Hook- und Hygiene-Gates ohne Reproduktionsbeweis
+
+Die maschinenlesbare Grenzziehung liegt in `app/src/sot/source-of-truth.json`, `app/src/sot/repo-boundaries.json` und `app/src/sot/testline-integrity.json`.
+
+## Start Here
+
+- [Documentation 2.0 Home](./docs/V2/HOME.md)
+- [Release 0.3.1a](./docs/V2/RELEASE_0.3.1a.md)
+- [Architecture Map](./docs/V2/ARCHITECTURE_MAP.md)
+- [Last 20 Commits](./docs/V2/LAST_20_COMMITS.md)
+- [Changelog](./CHANGELOG.md)

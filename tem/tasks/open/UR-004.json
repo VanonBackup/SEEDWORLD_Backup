@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "task_id": "UR-004",
+  "title": "Unreachable-Cause Evidence in Required-Report integrieren",
+  "status": "open",
+  "track": "unreachable-reduction",
+  "source_docs": [
+    "docs/V2/SYSTEM_PLAN.md"
+  ],
+  "description": "Ursachenbericht fuer unreachable wird als standardisierte Evidence erzeugt und in die Required-Claim-Kette aufgenommen, damit Drift und Regression maschinenlesbar werden.",
+  "scope_paths": [
+    "dev/tools/runtime/run-required-checks.mjs",
+    "dev/tools/runtime/repo-hygiene-map.mjs",
+    "runtime/evidence/unreachable-cause-report.json",
+    "runtime/evidence/required-check-report.json",
+    "runtime/evidence/governance-proof-manifest.json"
+  ],
+  "match_policy": "all_scope_paths_touched"
+}

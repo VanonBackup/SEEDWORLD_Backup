@@ -1,0 +1,19 @@
+{
+  "schema_version": "2.0.0",
+  "task_id": "RB-106",
+  "title": "CF-008 Hit-Testing auf screenToTile umstellen",
+  "status": "open",
+  "track": "canvas-migration",
+  "source_docs": [
+    "tem/rebuttals/cf-003-008-cycle-01.md",
+    "docs/V2/RULES.md",
+    "tem/WORKFLOW.md"
+  ],
+  "description": "Pointer-Interaktion von DOM-Rechtecken auf RenderManager-screenToTile migrieren und in UIController zentral verdrahten.",
+  "scope_paths": [
+    "app/src/ui/RenderManager.js",
+    "app/src/ui/UIController.js"
+  ],
+  "match_policy": "all_scope_paths_touched"
+}
+

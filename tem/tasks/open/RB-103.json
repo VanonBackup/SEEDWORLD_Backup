@@ -1,0 +1,20 @@
+{
+  "schema_version": "2.0.0",
+  "task_id": "RB-103",
+  "title": "CF-005 Interaction-Overlay Contract einfuehren",
+  "status": "open",
+  "track": "canvas-migration",
+  "source_docs": [
+    "tem/rebuttals/cf-003-008-cycle-01.md",
+    "docs/V2/RULES.md",
+    "tem/WORKFLOW.md"
+  ],
+  "description": "Hover/Selection/Effects als expliziten Overlay-State und Render-Contract definieren und gegen Tick/Viewport verifizieren.",
+  "scope_paths": [
+    "app/src/ui/IconAnimations.js",
+    "app/src/ui/RenderManager.js",
+    "app/src/ui/UIController.js"
+  ],
+  "match_policy": "all_scope_paths_touched"
+}
+

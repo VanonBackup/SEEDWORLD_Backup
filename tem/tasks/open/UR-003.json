@@ -1,0 +1,18 @@
+{
+  "schema_version": "2.0.0",
+  "task_id": "UR-003",
+  "title": "Hygiene-Gate fuer non-allowlisted unreachable schaerfen",
+  "status": "open",
+  "track": "unreachable-reduction",
+  "source_docs": [
+    "docs/V2/SYSTEM_PLAN.md"
+  ],
+  "description": "Fail-closed Regel einfuehren: non-allowlisted unreachable muessen gegen Zielbudget laufen und bei Verschlechterung blockieren; Ausnahmen nur mit explizitem Eintrag und Sunset.",
+  "scope_paths": [
+    "dev/tools/runtime/repo-hygiene-verify.mjs",
+    "app/src/sot/repo-boundaries.json",
+    "docs/V2/RULES.md",
+    "runtime/evidence/unreachable-cause-report.json"
+  ],
+  "match_policy": "all_scope_paths_touched"
+}
