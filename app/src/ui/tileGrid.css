@@ -1,0 +1,232 @@
+.tile-grid {
+  display: grid;
+  gap: 0;
+  padding: 0;
+  width: fit-content;
+  align-content: start;
+  justify-content: start;
+  grid-template-columns: repeat(16, 200px);
+  grid-template-rows: repeat(12, 200px);
+  background: transparent;
+  border: none;
+}
+
+.tile {
+  width: var(--tile-size, 200px);
+  height: var(--tile-size, 200px);
+  --subcell: calc(var(--tile-size, 200px) / 8);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.tile:hover {
+  border-color: transparent;
+}
+
+.tile:active {
+  transform: none;
+}
+
+.tile:focus-visible {
+  outline: 2px solid #f1d46a;
+  outline-offset: 2px;
+}
+
+.tile::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tile--empty {
+  background: transparent;
+  border: none;
+}
+
+.tile--empty::before,
+.tile--empty::after {
+  background: transparent;
+  opacity: 0;
+}
+
+.tile--mine {
+  background: #d3d3d3;
+}
+
+.tile--mine[data-resource="ore"]::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect width='8' height='8' fill='%23d3d3d3'/%3E%3Crect x='0' y='0' width='1' height='8' fill='%23bababa'/%3E%3Crect x='7' y='0' width='1' height='8' fill='%23a7a7a7'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%238b5a2b'/%3E%3Crect x='3' y='2' width='1' height='1' fill='%23846231'/%3E%3Crect x='5' y='1' width='1' height='1' fill='%23926a3b'/%3E%3Crect x='2' y='4' width='1' height='1' fill='%237b4f23'/%3E%3Crect x='6' y='3' width='1' height='1' fill='%23835a2e'/%3E%3Crect x='4' y='5' width='1' height='1' fill='%23774d21'/%3E%3Crect x='1' y='6' width='1' height='1' fill='%238e6234'/%3E%3Crect x='6' y='6' width='1' height='1' fill='%2373491e'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.tile--mine[data-resource="coal"] {
+  background: #000000;
+}
+
+.tile--mine[data-resource="coal"]::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Crect width='8' height='8' fill='%23000000'/%3E%3Crect x='0' y='0' width='1' height='8' fill='%230a0a0a'/%3E%3Crect x='7' y='0' width='1' height='8' fill='%23161616'/%3E%3Crect x='0' y='1' width='1' height='1' fill='%232f2f2f'/%3E%3Crect x='2' y='3' width='1' height='1' fill='%233a3a3a'/%3E%3Crect x='4' y='2' width='1' height='1' fill='%232a2a2a'/%3E%3Crect x='6' y='1' width='1' height='1' fill='%23383838'/%3E%3Crect x='1' y='5' width='1' height='1' fill='%232c2c2c'/%3E%3Crect x='3' y='6' width='1' height='1' fill='%233b3b3b'/%3E%3Crect x='5' y='4' width='1' height='1' fill='%232d2d2d'/%3E%3Crect x='7' y='6' width='1' height='1' fill='%23363636'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.tile--factory {
+  background: #4c6b70;
+}
+
+.tile--connector {
+  background: #565656;
+}
+
+.tile--storage {
+  background: #6a5380;
+}
+
+.tile--active {
+  border-color: transparent;
+}
+
+.tile--empty[data-wobble="on"] {
+  animation: tile-wobble 2200ms ease-in-out infinite;
+}
+
+.icon {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: calc(var(--tile-size, 200px) * 0.2);
+  line-height: 1;
+  font-weight: 800;
+  color: #f2f2f2;
+  text-shadow: none;
+  will-change: transform, opacity;
+  z-index: 5;
+}
+
+.tile-fx {
+  position: absolute;
+  left: 50%;
+  top: 36%;
+  transform: translate(-50%, -50%);
+  font-size: calc(var(--tile-size, 200px) * 0.06);
+  letter-spacing: 0.3em;
+  color: #f5f5f5;
+  pointer-events: none;
+  z-index: 6;
+  opacity: 0;
+}
+
+.tile[data-effect="mine"] .tile-fx {
+  animation: fx-mine 700ms linear infinite;
+}
+
+.tile[data-effect="factory"] .tile-fx {
+  animation: fx-factory 900ms ease-in-out infinite;
+}
+
+.tile[data-effect="storage"] .tile-fx {
+  animation: fx-storage 1300ms ease-in-out infinite;
+}
+
+.tile-output {
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  color: #f2f2f2;
+  text-shadow: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  z-index: 5;
+}
+
+@keyframes fx-mine {
+  0% {
+    opacity: 0;
+    transform: translate(-60%, 0%);
+  }
+  50% {
+    opacity: 0.95;
+    transform: translate(-50%, -22%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-38%, -45%);
+  }
+}
+
+@keyframes fx-factory {
+  0% {
+    opacity: 0.25;
+    transform: translate(-55%, -20%) scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -34%) scale(1);
+  }
+  100% {
+    opacity: 0.25;
+    transform: translate(-45%, -20%) scale(0.9);
+  }
+}
+
+@keyframes fx-storage {
+  0% {
+    opacity: 0.2;
+    transform: translate(-50%, -10%) scale(0.9);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translate(-50%, -18%) scale(1.04);
+  }
+  100% {
+    opacity: 0.2;
+    transform: translate(-50%, -10%) scale(0.9);
+  }
+}
+
+@keyframes tile-wobble {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(0.2px, -0.3px) rotate(0.16deg);
+  }
+  50% {
+    transform: translate(-0.2px, 0.2px) rotate(-0.14deg);
+  }
+  75% {
+    transform: translate(0.15px, -0.15px) rotate(0.1deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@media (max-width: 720px) {
+  .tile-grid {
+    gap: 0;
+    padding: 0;
+  }
+}
