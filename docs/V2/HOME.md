@@ -6,6 +6,7 @@ Documentation 2.0 verbindet drei Dinge in einem System: menschenlesbare Wahrheit
 
 - Wahrheit lesen: [TRUTH](./TRUTH.md)
 - Offene Aufgaben lesen: [PLAN](./PLAN.md)
+- Mechanische Haertung + Harmonisierung: [MECHANICAL_HARDENING_AND_HARMONIZATION_PLAN](./MECHANICAL_HARDENING_AND_HARMONIZATION_PLAN.md)
 - Abgeschlossene Aufgaben lesen: [ARCHIVE](./ARCHIVE.md)
 - Maschinenbasis: [app/src/sot/docs-v2.json](../../app/src/sot/docs-v2.json)
 
