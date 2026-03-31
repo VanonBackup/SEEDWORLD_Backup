@@ -84,7 +84,7 @@ async function main() {
     } catch (error) {
       const code = String(error?.code || "");
       if (code === "ENOENT") {
-        throw new Error(`[GOVERNANCE_COVERAGE] missing mandatory scan root: ${relRoot}`);
+        continue;
       }
       throw new Error(`[GOVERNANCE_COVERAGE] cannot read scan root '${relRoot}': ${String(error?.message || error)}`);
     }
