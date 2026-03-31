@@ -1,0 +1,108 @@
+{
+  "generated_at": "2026-03-31T13:27:10.041Z",
+  "totals": {
+    "unreachable": 60,
+    "zeroInboundNonEntrypoints": 41,
+    "allowlistedUnreachable": 19,
+    "nonAllowlistedUnreachable": 41,
+    "nonAllowlistedZeroInbound": 30,
+    "nonAllowlistedInboundButUnreachable": 11,
+    "entrypoints": 14
+  },
+  "byOwner": {
+    "Reproduction Evidence": {
+      "total": 31,
+      "zeroInbound": 29,
+      "inboundButUnreachable": 2,
+      "allowlisted": 6
+    },
+    "Authoritative Content": {
+      "total": 11,
+      "zeroInbound": 3,
+      "inboundButUnreachable": 8,
+      "allowlisted": 11
+    },
+    "Kernel Core": {
+      "total": 11,
+      "zeroInbound": 2,
+      "inboundButUnreachable": 9,
+      "allowlisted": 2
+    },
+    "Documentation V2": {
+      "total": 4,
+      "zeroInbound": 4,
+      "inboundButUnreachable": 0,
+      "allowlisted": 0
+    },
+    "Governance Control Plane": {
+      "total": 3,
+      "zeroInbound": 3,
+      "inboundButUnreachable": 0,
+      "allowlisted": 0
+    }
+  },
+  "byBucket": {
+    "dev/tools/runtime": {
+      "total": 32,
+      "zero": 30,
+      "inbound": 2,
+      "allowlisted": 0
+    },
+    "app/src/game": {
+      "total": 11,
+      "zero": 3,
+      "inbound": 8,
+      "allowlisted": 11
+    },
+    "app/src/kernel": {
+      "total": 11,
+      "zero": 2,
+      "inbound": 9,
+      "allowlisted": 2
+    },
+    "dev/scripts": {
+      "total": 3,
+      "zero": 3,
+      "inbound": 0,
+      "allowlisted": 3
+    },
+    "dev/tests/modules": {
+      "total": 3,
+      "zero": 3,
+      "inbound": 0,
+      "allowlisted": 3
+    }
+  },
+  "nonAllowlistedSample": [
+    "app/src/kernel/ActionRegistry.js",
+    "app/src/kernel/GateManager.js",
+    "app/src/kernel/KernelController.js",
+    "app/src/kernel/KernelGates.js",
+    "app/src/kernel/KernelRouter.js",
+    "app/src/kernel/gates/accessGates.js",
+    "app/src/kernel/gates/operationGates.js",
+    "app/src/kernel/runtimeGuards.js",
+    "app/src/kernel/seedGuard.js",
+    "dev/tools/runtime/apply-github-ruleset.mjs",
+    "dev/tools/runtime/check-global-redundancy.mjs",
+    "dev/tools/runtime/check-tem-structure.mjs",
+    "dev/tools/runtime/check-wrapper-guardrails.mjs",
+    "dev/tools/runtime/evidence-lock.mjs",
+    "dev/tools/runtime/function-sot-shared.mjs",
+    "dev/tools/runtime/governance-findings-materialize.mjs",
+    "dev/tools/runtime/governance-findings-shared.mjs",
+    "dev/tools/runtime/governance-verify.mjs",
+    "dev/tools/runtime/installGitHooks.mjs",
+    "dev/tools/runtime/llm-entry.mjs",
+    "dev/tools/runtime/llm-override.mjs",
+    "dev/tools/runtime/llm-read-guard.mjs",
+    "dev/tools/runtime/new-action-template.mjs",
+    "dev/tools/runtime/preflight-mutation-guard.mjs",
+    "dev/tools/runtime/probe-docs-v2-adversarial.mjs",
+    "dev/tools/runtime/release-guard.mjs",
+    "dev/tools/runtime/repo-hygiene-map.mjs",
+    "dev/tools/runtime/repo-hygiene-verify.mjs",
+    "dev/tools/runtime/repo-hygiene-why.mjs",
+    "dev/tools/runtime/report-untested-systems.mjs"
+  ]
+}

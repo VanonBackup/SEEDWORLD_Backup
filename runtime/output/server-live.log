@@ -1,0 +1,5 @@
+[START] Starting SeedWorld App Server...
+[START] Server started successfully!
+[HTTP] Launcher: http://127.0.0.1:3000/
+[HTTP] Game: http://127.0.0.1:3000/game
+[INFO] Press Ctrl+C to stop server

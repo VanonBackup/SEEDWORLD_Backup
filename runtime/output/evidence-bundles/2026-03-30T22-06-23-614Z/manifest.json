@@ -1,0 +1,64 @@
+{
+  "createdAt": "2026-03-30T22:06:23.626Z",
+  "targetStrictEvidence": 10,
+  "strictEvidenceCount": 0,
+  "totalItems": 7,
+  "items": [
+    {
+      "source": "C:\\Users\\Vannon\\Downloads\\SeedWorld-main (1)\\SeedWorld-main\\runtime\\.patch-manager\\logs\\test-run-2026-03-30T19-54-17-128Z.json",
+      "relative": "runtime/.patch-manager/logs/test-run-2026-03-30T19-54-17-128Z.json",
+      "classification": "legacy-evidence",
+      "size": 856,
+      "mtime": "2026-03-30T19:54:17.689Z",
+      "sha256": "03f5af94477b7e081d432a444c15e50bcf944fd8cee2bf62257ec208714fa425"
+    },
+    {
+      "source": "C:\\Users\\Vannon\\Downloads\\SeedWorld-main (1)\\SeedWorld-main\\runtime\\.patch-manager\\logs\\test-run-2026-03-30T20-00-43-821Z.json",
+      "relative": "runtime/.patch-manager/logs/test-run-2026-03-30T20-00-43-821Z.json",
+      "classification": "legacy-evidence",
+      "size": 855,
+      "mtime": "2026-03-30T20:00:43.943Z",
+      "sha256": "811a74f19cba3661cd53ccf7e8d85b418597587cc3f0547e274ab7545e779092"
+    },
+    {
+      "source": "C:\\Users\\Vannon\\Downloads\\SeedWorld-main (1)\\SeedWorld-main\\runtime\\.patch-manager\\logs\\test-run-2026-03-30T22-06-22-281Z.json",
+      "relative": "runtime/.patch-manager/logs/test-run-2026-03-30T22-06-22-281Z.json",
+      "classification": "legacy-evidence",
+      "size": 850,
+      "mtime": "2026-03-30T22:06:22.312Z",
+      "sha256": "aa773c22d72c9390779994c26a371e9506df39004063e7950979dd3efe1ba1d1"
+    },
+    {
+      "source": "C:\\Users\\Vannon\\Downloads\\SeedWorld-main (1)\\SeedWorld-main\\runtime\\.patch-manager\\logs\\test-run-2026-03-30T22-06-22-709Z.json",
+      "relative": "runtime/.patch-manager/logs/test-run-2026-03-30T22-06-22-709Z.json",
+      "classification": "legacy-evidence",
+      "size": 850,
+      "mtime": "2026-03-30T22:06:22.739Z",
+      "sha256": "63319e8d47d91ea86941aa65505275286180aa888a0536325e4353e6b563aebb"
+    },
+    {
+      "source": "C:\\Users\\Vannon\\Downloads\\SeedWorld-main (1)\\SeedWorld-main\\runtime\\.patch-manager\\logs\\test-run-2026-03-30T22-06-23-138Z.json",
+      "relative": "runtime/.patch-manager/logs/test-run-2026-03-30T22-06-23-138Z.json",
+      "classification": "legacy-evidence",
+      "size": 850,
+      "mtime": "2026-03-30T22:06:23.168Z",
+      "sha256": "eb798ee81b10656d49ffbbdd8d6c74e1cb9a545968767b45e03f22d62bf5c28e"
+    },
+    {
+      "source": "C:\\Users\\Vannon\\Downloads\\SeedWorld-main (1)\\SeedWorld-main\\runtime\\.patch-manager\\logs\\test-run-2026-03-30T22-06-23-558Z.json",
+      "relative": "runtime/.patch-manager/logs/test-run-2026-03-30T22-06-23-558Z.json",
+      "classification": "legacy-evidence",
+      "size": 850,
+      "mtime": "2026-03-30T22:06:23.588Z",
+      "sha256": "a98e41987e83b2e6167b6ec3c7100df2f4a9b094398457af6dde3e9f3cf05e68"
+    },
+    {
+      "source": "C:\\Users\\Vannon\\Downloads\\SeedWorld-main (1)\\SeedWorld-main\\runtime\\output\\playwright\\full-playwright-header.png",
+      "relative": "runtime/output/playwright/full-playwright-header.png",
+      "classification": "playwright-artifact",
+      "size": 767261,
+      "mtime": "2026-03-30T20:02:28.085Z",
+      "sha256": "44b57994d7eb7c42ad9ae9f55cd6488cf198adae19737c41e71a1ad0399c6750"
+    }
+  ]
+}
